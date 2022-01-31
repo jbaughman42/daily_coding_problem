@@ -14,9 +14,7 @@ You can modify the input array in-place.
 
 
 def missing_integer(nums):
-    uniques = set(nums)
-    pos_nums = sorted([i for i in uniques if i > 0])
-    print(pos_nums)
+    pos_nums = sorted([i for i in set(nums) if i > 0])
     highest = pos_nums[-1]
     seq = range(pos_nums[0], highest + 2)  # highest+2 catches [1, 2] ==> 3
     return [i for i in seq if i not in pos_nums][0]
