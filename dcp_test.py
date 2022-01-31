@@ -10,6 +10,7 @@ import pytest
 # from daily_coding_problem.n_steps import n_steps
 from dcp_1 import add_to_k
 from dcp_2 import calc_mult_array
+from dcp_4 import missing_integer
 from dcp_test_data import *
 
 
@@ -25,3 +26,7 @@ def test_add_to_k(test_input, expected):
 @pytest.mark.parametrize("test_input,expected", dcp_2_test_data)
 def test_mult_calc_array(test_input, expected):
     assert calc_mult_array(test_input) == expected
+
+@pytest.mark.parametrize("test_input,expected", dcp_4_test_data)
+def test_missing_integer(test_input,expected):
+    assert missing_integer(test_input) == expected
