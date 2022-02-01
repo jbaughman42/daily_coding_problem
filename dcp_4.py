@@ -14,10 +14,15 @@ You can modify the input array in-place.
 
 
 def missing_integer(nums):
+    # sorts and removes duplicate and negative numbers
     pos_nums = sorted([i for i in set(nums) if i > 0])
+
+    # once sorted, the last value in the list will help us set a range
     highest = pos_nums[-1]
-    seq = range(pos_nums[0], highest + 2)  # highest+2 catches [1, 2] ==> 3
-    return [i for i in seq if i not in pos_nums][0]
+    
+    # highest+2 catches cases with no gaps in the array
+    # eg [1, 2] ==> 3
+    return [i for i in range(pos_nums[0], highest + 2) if i not in pos_nums][0]
 
 
 def main():

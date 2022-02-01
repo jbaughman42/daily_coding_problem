@@ -5,6 +5,8 @@ Created January 28, 2022 by Jennifer Baughman
 Description:
 """
 
+
+
 dcp_1_test_data = [
     ([[10, 15, 3, 7], 17], True),
     ([[1, 3, 5, 8], 13], True),
@@ -21,4 +23,8 @@ dcp_4_test_data = [
     ([3, 4, -1, 1], 2),
     ([1, 2, 0], 3),
     ([4, 1, 2, -2, -1, -1, 6, 2, 4], 3)
+]
+
+dcp_5_fixture_params = [
+    (3, 4), (1, 2), (7, 'x')
 ]
